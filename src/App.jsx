@@ -1,17 +1,19 @@
 import React from "react";
 import "./styles.css";
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import { MoviesList } from "./components/MoviesList";
-import { MovieDetail } from "./components/MovieDetails";
-import { MoviePlaylist } from "./components/MoviePlaylist";
-import { Header } from './components/Header'; 
+import MoviesList from './components/MoviesList';
+import MovieDetail from './components/MovieDetails';
+import MoviePlaylist from './components/MoviePlaylist';
+import Header from './components/Header';
+import NavBar from './components/NavBar';
 
 export default function App() {
   return (
 		<>
 			<div className="App">
-			  <BrowserRouter>
-				  <Header />
+				<BrowserRouter>
+					<Header />
+					<NavBar />
 					<Switch>
 						<Route path="/" exact component={MoviesList} />
 						<Route path="/movie/:id" component={MovieDetail} />

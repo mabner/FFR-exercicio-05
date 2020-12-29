@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { addMovie } from '../actions/playlistActions';
 
-export const MovieDetail = (props) => {
+const MovieDetail = (props) => {
 	const dispatch = useDispatch();
 	const [movie, setMovie] = useState({ data: [] });
 	const id = props?.match?.params?.id;
@@ -23,7 +23,7 @@ export const MovieDetail = (props) => {
 
 	//console.log('Request: ' + requestMovie);
 	//console.log('Disp: ' + dispatch);
-	console.log('ID: ' + id)
+	console.log('ID: ' + id);
 	return (
 		<>
 			<div
@@ -73,3 +73,4 @@ export const MovieDetail = (props) => {
 		</>
 	);
 };
+export default MovieDetail;

@@ -1,11 +1,12 @@
 import React from 'react';
-import { NavBar } from './NavBar';
 
-export const Header = () => {
+const Header = (_title) => {
 	return (
 		<>
 			<h1>The Movie Database API</h1>
-			<NavBar />
+			{/* <h1>${ title }</h1> */ }
+			{/*Verificar sobre passar o titulo como parametro*/}
 		</>
 	);
 };
+export default Header;

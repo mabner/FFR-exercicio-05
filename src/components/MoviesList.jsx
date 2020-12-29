@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MoviesService } from '../services/MoviesService';
 import { Link } from 'react-router-dom';
 
-export const MoviesList = () => {
+const MoviesList = () => {
 	const [movies, setMovies] = useState({ data: { results: [] } });
 
 	const requestMovies = async () => {
@@ -30,3 +30,4 @@ export const MoviesList = () => {
 	);
 };
 // movie.poster_path - Imagem do poster do filme
+export default MoviesList;
