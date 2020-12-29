@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MoviesService } from '../services/MoviesService';
 
 export interface Movie {
