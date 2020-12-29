@@ -1,9 +1,9 @@
-# Exercício 4 - FFR (React + Redux)
+# Exercício 05 - FFR
 
 ### Install
 ```javascript
-git clone https://github.com/mabner/FFR-exercicio-04.git
-cd exercicio-04
+git clone https://github.com/mabner/FFR-exercicio-05.git
+cd FFR-exercicio-05
 npm i
 npm start
 ```
@@ -11,5 +11,4 @@ npm start
 ### Paths:
 ##### Get a list of the current 20 most popular movies:
 `http://localhost:3000/`
-##### Get specific movie by ID (E.g. Kindred) :
-`http://localhost:3000/movie/717672`
+
