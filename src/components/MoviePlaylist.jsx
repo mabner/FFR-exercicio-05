@@ -19,7 +19,7 @@ const MoviePlaylist = () => {
 			<ul>
 				{playlist.map((movie, index) => (
 					<li key={index}>
-						{/* <NavBarWrapper> */}
+						<NavBarWrapper>
 
 						<Link to={`/movie/${movie?.id}`}>
 							{ String(movie?.title)}
@@ -30,7 +30,7 @@ const MoviePlaylist = () => {
 						>
 							X
 						</button>
-						{/* </NavBarWrapper> */}
+						</NavBarWrapper>
 					</li>
 				))}
 			</ul>
