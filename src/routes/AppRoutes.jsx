@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import MoviesList from '../components/MoviesList';
 import MovieDetail from '../components/MovieDetails';

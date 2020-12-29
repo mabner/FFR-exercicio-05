@@ -3,35 +3,39 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeMovie } from '../actions/playlistActions';
 import NavBarWrapper from './styles/NavBarWrapper';
+import MoviesList from './MoviesList';
 
 
 const MoviePlaylist = () => {
 	const dispatch = useDispatch();
-	const movieList = useSelector((sel) => sel.movies);
+	const movieList = useSelector((state) => state.movies);
 	const { playlist } = movieList;
 	
 	console.log('playlist: ' + playlist);
-	console.log('movieList: ' + movieList);
-	
+	console.log( 'movieList: ' + movieList );
 	return (
 		<>
-			<h1>Movie Playlist</h1>
+			<h1>My Playlist</h1>
 			<ul>
-				{playlist.map((movie, id) => (
-					<li key={id}>
-						<NavBarWrapper>
-							<Link to={`/movie/${movie?.id}`}>{movie?.tittle}</Link>
-							<button
-								onClick={() => dispatch(removeMovie(id))}
-								className="navBar"
-							>
-								X
-							</button>
-						</NavBarWrapper>
+				{playlist.map((movie, index) => (
+					<li key={index}>
+						{/* <NavBarWrapper> */}
+
+						<Link to={`/movie/${movie?.id}`}>
+							{ String(movie?.title)}
+						</Link>
+						<button
+							onClick={() => dispatch(removeMovie(index))}
+							className="navBar"
+						>
+							X
+						</button>
+						{/* </NavBarWrapper> */}
 					</li>
 				))}
 			</ul>
 		</>
 	);
+	
 };
 export default MoviePlaylist;

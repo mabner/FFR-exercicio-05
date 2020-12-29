@@ -13,10 +13,10 @@ export const listMovies = (id, movie) => ({
 
 export const addMovie = (movie) => ({
 	type: actions.addMovie,
-	movie,
+	payload: movie,
 });
 
 export const removeMovie = (id) => ({
 	type: actions.removeMovie,
-	id,
+	payload: id,
 });

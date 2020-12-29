@@ -19,9 +19,10 @@ export const playlist = (state = initialState, action) => {
     case playlistActions.addMovie:
       playlist = [...new Set([...state.playlist, action.movie])];
       return {
-        ...state,
-        playlist,
-      };
+			...state,
+			// playlist,
+			playlist: state.playlist.concat(action),
+		};
     case playlistActions.removeMovie:
       playlist = state.playlist.filter((_, i) => i !== action.id);
       return {
